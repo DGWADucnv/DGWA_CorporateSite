@@ -19,6 +19,7 @@
 @include row-variant(".row-5", 5px);
 @include row-variant(".row-10", 10px);
 @include row-variant(".row-15", 15px);
+@include row-variant(".row-25", 25px);
 
 @include media-breakpoint-down(md) {
   @include row-variant(".row-17", 17px);
