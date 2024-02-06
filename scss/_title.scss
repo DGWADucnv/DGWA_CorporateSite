@@ -32,3 +32,11 @@
     margin-bottom: 29px;
   }
 }
+
+.title-blue {
+  color: #0A519F;
+
+  &:after {
+    background-color: #0A519F;
+  }
+}
