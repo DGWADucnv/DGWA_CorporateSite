@@ -72,7 +72,7 @@
 // --------------------------------------------
 .section-digital {
   background-color: #0A519F;
-  padding: 57px 0 50px;
+  padding: 45px 0 50px;
 
   @include media-breakpoint-down(md) {
     padding: 39px 0 33px;
@@ -129,7 +129,7 @@
         border-radius: 0;
   
         @include media-breakpoint-down(xl) {
-          padding: 28px 20px 10px;
+          padding: 28px 15px 10px;
         }
   
         .title-card {
@@ -213,7 +213,9 @@
   }
 
   .title-white {
-    margin-bottom: 19px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 21px;
+    }
   }
 
   .container-fluid {
@@ -328,7 +330,17 @@
 }
 
 .section-about-dev {
-  padding: 57px 0;
+  padding: 57px 0 40px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0 30px;
+  }
+
+  .title-white {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
 
   .flex-grow-1 {
     @include media-breakpoint-down(lg) {
@@ -345,11 +357,15 @@
       margin-bottom: 25px;
 
       @include media-breakpoint-down(xl) {
-        font-size: 14px;
+        // font-size: 14px;
       }
 
       &:nth-child(2) {
         line-height: 1.5;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 13px;
+        }
       }
     }
   }
@@ -367,8 +383,20 @@
 }
 
 .section-about-test {
-  padding: 57px 0;
+  padding: 57px 0 40px;
   background-color: #0A519F;
+
+  @include media-breakpoint-down(md) {
+    padding: 40px 0 30px;
+  }
+
+  .title-white {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 21px;
+    }
+  }
 
   .flex-grow-1 {
     @include media-breakpoint-down(lg) {
@@ -376,7 +404,8 @@
     }
 
     @include media-breakpoint-down(md) {
-      padding: 0 10px;
+      padding-left: 10px;
+      padding-right: 0;
     }
 
     .lead {
@@ -384,12 +413,12 @@
       color: #fff;
       margin-bottom: 25px;
 
-      @include media-breakpoint-down(xl) {
-        font-size: 14px;
-      }
-
       &:nth-child(2) {
         line-height: 1.5;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 12px;
+        }
       }
     }
   }
@@ -402,6 +431,89 @@
     @include media-breakpoint-down(lg) {
       width: unset;
       margin-left: 0;
+    }
+  }
+}
+
+// -------------------------------------------------------
+.section-company {
+  padding: 58px 0;
+
+  @include media-breakpoint-down(md) {
+    padding: 41px 0;
+  }
+
+  .title-blue {
+    margin-bottom: 0;
+  }
+
+  .d-flex-profile {
+    padding: 27px 0;
+    border-bottom: 1px solid #0A519F;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin: 0 8px;
+      padding: 24px 0 19px;
+    }
+
+    &:last-child {
+      border-bottom: unset;
+    }
+
+    &:nth-child(1) {
+      padding: 31px 0 20px;
+
+      @include media-breakpoint-down(md) {
+        padding-bottom: 18px;
+      }
+
+      .title-company {
+        @include media-breakpoint-down(md) {
+          margin-bottom: 11px;
+        }
+      }
+    }
+
+    .title-company {
+      color: #064386;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 0;
+      margin-left: 5px;
+      
+      @include media-breakpoint-up(md) {
+        width: 15%;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-left: 9px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .company-name {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      @include media-breakpoint-down(md) {
+        margin-left: 9px;
+      }
+    }
+  
+    .lead {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 0;
+
+      @include media-breakpoint-down(md) {
+        margin-left: 9px;
+      }
     }
   }
 }
